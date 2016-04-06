@@ -1,0 +1,6 @@
+E:\DoTask\Task356\Demo\WcfOrigin\WcfOrigin\bin\WcfOrigin.dll.config
+E:\DoTask\Task356\Demo\WcfOrigin\WcfOrigin\bin\WcfOrigin.dll
+E:\DoTask\Task356\Demo\WcfOrigin\WcfOrigin\bin\WcfOrigin.pdb
+E:\DoTask\Task356\Demo\WcfOrigin\WcfOrigin\obj\Debug\WcfOrigin.csprojResolveAssemblyReference.cache
+E:\DoTask\Task356\Demo\WcfOrigin\WcfOrigin\obj\Debug\WcfOrigin.dll
+E:\DoTask\Task356\Demo\WcfOrigin\WcfOrigin\obj\Debug\WcfOrigin.pdb
