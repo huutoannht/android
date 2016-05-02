@@ -1,6 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Collections.Specialized;
 using System.Linq;
+using System.Net;
 using System.Runtime.Serialization;
 using System.ServiceModel;
 using System.ServiceModel.Web;
@@ -49,6 +51,44 @@ namespace WcfOrigin
                 throw new WebFaultException<string>("Unauthorized Request.", HttpStatusCode.Unauthorized);
 
             }
+        }
+        private static bool Authenticate(IncomingWebRequestContext context)
+        {
+            bool Authenticated = false;
+
+            string normalizedUrl;
+            string normalizedRequestParameters;
+
+            //context.Headers
+            NameValueCollection pa = context.UriTemplateMatch.QueryParameters;
+
+            if (pa != null && pa["oauth_consumer_key"] != null)
+            {
+                // to get uri without oauth parameters
+                string uri = context.UriTemplateMatch.RequestUri.OriginalString.Replace
+                    (context.UriTemplateMatch.RequestUri.Query, "");
+
+                string consumersecret = "secret";
+
+                OAuthBase oauth = new OAuthBase();
+
+                string hash = oauth.GenerateSignature(
+                    new Uri(uri),
+                    pa["oauth_consumer_key"],
+                    consumersecret,
+                    null, // totken
+                    null, //token secret
+                    "GET",
+                    pa["oauth_timestamp"],
+                    pa["oauth_nonce"],
+                    out normalizedUrl,
+                    out normalizedRequestParameters
+                    );
+
+                Authenticated = pa["oauth_signature"] == hash;
+            }
+
+            return Authenticated;
         }
 
     }

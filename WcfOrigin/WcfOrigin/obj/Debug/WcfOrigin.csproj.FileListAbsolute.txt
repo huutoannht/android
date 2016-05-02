@@ -4,3 +4,9 @@ E:\DoTask\Task356\Demo\WcfOrigin\WcfOrigin\bin\WcfOrigin.pdb
 E:\DoTask\Task356\Demo\WcfOrigin\WcfOrigin\obj\Debug\WcfOrigin.csprojResolveAssemblyReference.cache
 E:\DoTask\Task356\Demo\WcfOrigin\WcfOrigin\obj\Debug\WcfOrigin.dll
 E:\DoTask\Task356\Demo\WcfOrigin\WcfOrigin\obj\Debug\WcfOrigin.pdb
+C:\Users\toannh5\Documents\android\WcfOrigin\WcfOrigin\obj\Debug\WcfOrigin.csprojResolveAssemblyReference.cache
+C:\Users\toannh5\Documents\android\WcfOrigin\WcfOrigin\obj\Debug\WcfOrigin.dll
+C:\Users\toannh5\Documents\android\WcfOrigin\WcfOrigin\obj\Debug\WcfOrigin.pdb
+C:\Users\toannh5\Documents\android\WcfOrigin\WcfOrigin\bin\WcfOrigin.dll.config
+C:\Users\toannh5\Documents\android\WcfOrigin\WcfOrigin\bin\WcfOrigin.dll
+C:\Users\toannh5\Documents\android\WcfOrigin\WcfOrigin\bin\WcfOrigin.pdb
