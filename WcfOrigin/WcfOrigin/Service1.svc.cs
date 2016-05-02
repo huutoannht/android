@@ -32,5 +32,24 @@ namespace WcfOrigin
             }
             return composite;
         }
+        public User GetUser(string UserId)
+        {
+            if (Authenticate(WebOperationContext.Current.IncomingRequest))
+            {
+                return new User
+                {
+                    UserName = "UserName",
+                    UserPassword = "UserPassword"
+                };
+            }
+            else
+            {
+                WebOperationContext.Current.OutgoingResponse.StatusCode = HttpStatusCode.Unauthorized;
+
+                throw new WebFaultException<string>("Unauthorized Request.", HttpStatusCode.Unauthorized);
+
+            }
+        }
+
     }
 }
