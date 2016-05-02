@@ -19,7 +19,11 @@ namespace WcfOrigin
 
         [OperationContract]
         CompositeType GetDataUsingDataContract(CompositeType composite);
-
+        [WebInvoke(Method = "GET",
+       ResponseFormat = WebMessageFormat.Xml,
+       BodyStyle = WebMessageBodyStyle.Bare,
+       UriTemplate = "user/{UserId}")]
+        User GetUser(string UserId);
         // TODO: Add your service operations here
     }
 
